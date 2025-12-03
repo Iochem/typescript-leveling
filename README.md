@@ -1,7 +1,6 @@
 # 🚀 TypeScript Leveling — Treining and e mini projects
-This repository has the purpose of documenting my evolution in **TypeScript**, creation of several practices training and small projects  (organized by difficulty level), 
-exploring different concepts,testing my 
-skills.
+This repository has the purpose of documenting my evolution in **TypeScript**, creation of several of concept-based examples and small projects (organized by difficulty level), 
+exploring different concepts,testing my skills over time.
 
 ## 🎯 objectives
 - Consolidate programming logic fundamentals.
@@ -13,4 +12,7 @@ skills.
 - TypeScript
 - Node.js
 - ts-node
-- ESLint / Prettier
+
+
+## 🌍 Available languages
+- [Português](README.pt-BR.md)
