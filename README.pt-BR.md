@@ -1,6 +1,6 @@
 # 🚀 TypeScript Leveling — Treinos e Mini Projetos
 
-Este repositório tem como o propósito registrar minha evolução contínua em **TypeScript**, por meio da construção de diversos treinos práticos e mini projetos(organizados por nível de dificuldade), explorando diferentes conceitos, para testar e aprimorar minhas habilidades.
+Este repositório tem como o propósito registrar minha evolução contínua em **TypeScript**, por meio da construção de exemplos baseados em conceitos e mini projetos(organizados por nível de dificuldade), explorando diferentes conceitos, para testar e aprimorar minhas habilidades ao longo do tempo.
 
 ## 🎯 Objetivo
 
@@ -12,6 +12,7 @@ Este repositório tem como o propósito registrar minha evolução contínua em 
 ## 🛠 Tecnologias Utilizadas
 - TypeScript
 - Node.js
+- ts-node
 
 ## 🌍 Languagens disponíveis
 - [English](README.md)
