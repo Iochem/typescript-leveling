@@ -1,3 +1,4 @@
+
 // ======================================================
 // Variable Declarations
 // ======================================================
@@ -29,6 +30,8 @@ counter++;
 // Use camelCase in common variables
 let userAge = 20;
 
+export {};
+
 /*
 - structure(estrutura):
 varKey varName = value;
@@ -36,6 +39,6 @@ varKey varName = value;
 Notes:
 -  It´s can annotate the type:
 varKey varName: varType = value;
+
 - TypeScript do type inference, so the primitive type annotation are often unnecessary.
  */
-

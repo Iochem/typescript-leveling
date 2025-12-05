@@ -2,7 +2,6 @@
 // Arrow Functions
 // ======================================================
 
-
 // Demonstrates average, addition and subtraction with typed parameters.
 const average = (num1: number, num2: number): number => {
     return (num1 + num2)/ 2;
@@ -22,6 +21,10 @@ console.log(subtract(33.2 , 44.5));
 const double = (n: number) => n * 2;
 console.log("\n" + double(10));
 
+
+// Marks the file as a module to avoid global scope conflicts.
+export {};
+
 /*
 - Structure (estrutura):
 const nameFunction = (varName: varType): ReturnType =>  {
@@ -36,8 +39,9 @@ Use arrow functions for:
 
 When not to use arrow functions:
 - Object methods that require a dynamic 'this'
-- Class methds
-- Functions that to be need used as constructor (arrow functions cannot be used with 'new')
+- Class methods
+- Functions that need to be used as constructor (arrow functions cannot be used with 'new')
 - When you need to call the function before its declaration
 
  */
+
