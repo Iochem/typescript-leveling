@@ -21,7 +21,6 @@ console.log(subtract(33.2 , 44.5));
 const double = (n: number) => n * 2;
 console.log("\n" + double(10));
 
-
 // Marks the file as a module to avoid global scope conflicts.
 export {};
 
