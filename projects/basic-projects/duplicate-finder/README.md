@@ -8,16 +8,15 @@
 
 
 ## 📚 Concepts
-- Arrays
-- Typed function
-- Comparison logic
-- Conditional statements (if / else)
-- length (gets the number of elements in the array.)
-- Includes() (To check duplicate elements)
-- Slice() (To create a new array)
+- **Static typing**
+- **Arrays & array methods** (`push`)
+- **Typed functions** 
+- **Comparison logic**
+- **Loops** (`for`)
+- **Conditional statements** (`if` / `else`)
+- **Built-in object properties & methods** (`length`, `slice()`, `includes()`)
 
-
-## 🛠️Technologies]
+## 🛠️Technologies
 - TypeScript
 - Node.js
 - ts-node
