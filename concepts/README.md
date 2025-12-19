@@ -2,12 +2,14 @@
 This folder contains a collection of fundamental TypeScript concepts, this objective is build learn and training fundamentals topics about it,written in a clear and practical way to support continuous learning
 
 ## 🎯 Studied Topics
-- **Variable declarations** (`let`, `const`, `type annotation`)
+- **Loops** (`for`)
 - **Arrow functions**
-- **Interfaces**
-- **Arrays** (`length`, `push`, `find`)
-- **Types** ( union Types, type with Functions )
+- **Basics Interfaces**
+- **Optional Properties** (`?`)
 - **Conditional statements** (`if` / `else`)
+- **Variable declarations** (`let`, `const`, `type annotation`)
+- **Arrays** (`length`, `push`, `find`, `ForEach` )
+- **Types** ( union Types, type with Functions, interfaces types )
 
 ## 🛠️ Technologies
 - TypeScript
