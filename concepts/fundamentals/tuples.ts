@@ -8,13 +8,14 @@
 type Coordinate = [number, number];
 const point: Coordinate = [10, 20];
 
-// Nomead tuples
+// Named Tuples
 type Calendar = [day: number, month: number, year: number];
 
 const date: Calendar = [13, 5, 2005];
 console.log("Day: " + date[0]); //Acess by indice
 console.log("Month: " + date[1]);
 console.log("Year: " + date[2]);
+
 
 
 //----- without to use 'type' -----
