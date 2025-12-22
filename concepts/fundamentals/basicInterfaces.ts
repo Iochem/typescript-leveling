@@ -36,6 +36,8 @@ const productA: Product = {
 
 console.log(productA);
 
+export {};
+
 /*
 - Structure(estrutura):
 interface InterfaceName {
