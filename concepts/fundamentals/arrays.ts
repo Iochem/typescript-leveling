@@ -25,24 +25,6 @@ const arrayNumber: number[] = [1,2,3,4];
 const arrayNumber2: Array<number> = [1,2,3,4]; //Diamond operators
 
 
-// ===== Manipulating Arrays =====
-
-const arrayNum : number[] = [5,6,7,6,8];
-
-// Returns the first element that satisfies the condition
-const searchNum = arrayNum.find(num => num > 5);
-console.log(searchNum); //6
-
-// loop through each array item and print
-arrayNum.forEach(value => console.log(value));
-
-// Print all items that satisfies the condition (> 6)
-arrayNum.forEach(value => {
-    if(value > 6){
-        console.log( + value);
-    }
-})
-
 export {};
 
 /*
