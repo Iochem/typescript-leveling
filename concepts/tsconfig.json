@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     // File Layout
-    "rootDir": "./src",
+    "rootDir": ".",
     "outDir": "./dist",
 
     // Environment Settings
@@ -15,5 +15,8 @@
     "strict": true,
     "skipLibCheck": true,
   },
-  "include": ["src/**/*"]
+  "include": [
+    "fundamentals/**/*.ts",
+    "methods/**/*.ts",
+  ]
 }
