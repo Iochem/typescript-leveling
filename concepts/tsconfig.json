@@ -18,6 +18,6 @@
   "include": [
     "fundamentals/**/*.ts",
     "methods/**/*.ts",
-    "poo/**/*.ts",
+    "oop/**/*.ts",
   ]
 }
