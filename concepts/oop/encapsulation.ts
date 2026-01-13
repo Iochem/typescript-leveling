@@ -29,9 +29,12 @@ class User {  // Form for construct objects
 const user = new User(20);
 
 user.haveBirthday(); // ok
-console.log(user.getAge());       // 21
+console.log(user.getAge()); // 21
 
 //user.age = -5; // ❌ error: age is private
+
+
+export{};
 
 /*
 private → encapsulation (data protection)
@@ -46,12 +49,4 @@ OOP makes sense when objects have behavior.
  */
 
 
-
-
-
-
-
-
-
-export{};
 
