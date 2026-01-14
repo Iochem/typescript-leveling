@@ -8,7 +8,8 @@ This folder contains a collection of fundamental TypeScript concepts, this objec
 - **Optional Properties** (`?`)
 - **Conditional statements** (`if` / `else`)
 - **Variable declarations** (`let`, `const`, `type annotation`)
-- **Arrays** (`length`, `push`, `find`, `ForEach` )
+- **Arrays** (`length`, `push`)
+- **Arrays Methods** (`pop`, `Map`, `find`, `ForEach`, `filter` )
 - **Types** ( union Types, type with Functions, interfaces types )
 
 ## 🛠️ Technologies
