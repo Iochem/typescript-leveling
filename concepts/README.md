@@ -11,6 +11,7 @@ This folder contains a collection of fundamental TypeScript concepts, this objec
 - **Arrays** (`length`, `push`)
 - **Arrays Methods** (`pop`, `Map`, `find`, `ForEach`, `filter` )
 - **Types** ( union Types, type with Functions, interfaces types )
+- **Oop** ( inheritance, encapsulation, composition)
 
 ## 🛠️ Technologies
 - TypeScript
