@@ -19,5 +19,6 @@
     "fundamentals/**/*.ts",
     "methods/**/*.ts",
     "oop/**/*.ts",
+    "error-handling/**/*.ts",
   ]
 }
