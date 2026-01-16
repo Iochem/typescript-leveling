@@ -9,6 +9,7 @@
 class User {  // Form for construct objects
     private age: number; //Private - Protect atributes
 
+    // Creates a valid object
     constructor(age: number) { // Validation
         if (age < 0) {
             throw new Error("Age invalid");
@@ -16,7 +17,8 @@ class User {  // Form for construct objects
         this.age = age;
     }
 
-    getAge() {
+    // Getter - It is a property with behavior.
+    getAge() { // Displays a value without exposing the field.
         return this.age;
     }
 
@@ -32,6 +34,7 @@ user.haveBirthday(); // ok
 console.log(user.getAge()); // 21
 
 //user.age = -5; // ❌ error: age is private
+
 
 
 export{};
