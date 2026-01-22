@@ -3,15 +3,16 @@ This folder contains a collection of fundamental TypeScript concepts, this objec
 
 ## 🎯 Studied Topics
 - **Loops** (`for`)
-- **Arrow functions**
+- **Arrow Functions**
 - **Basics Interfaces**
 - **Optional Properties** (`?`)
-- **Conditional statements** (`if` / `else`)
-- **Variable declarations** (`let`, `const`, `type annotation`)
+- **Conditional Statements** (`if` / `else`)
+- **Variable Declarations** (`let`, `const`, `type annotation`)
 - **Arrays** (`length`, `push`)
 - **Arrays Methods** (`pop`, `Map`, `find`, `ForEach`, `filter` )
 - **Types** ( union Types, type with Functions, interfaces types )
-- **Oop** ( inheritance, encapsulation, composition)
+- **Error Handling** (`try`, `catch`, `throw`)
+- **Oop** (inheritance, encapsulation, composition)
 
 ## 🛠️ Technologies
 - TypeScript
