@@ -22,10 +22,6 @@ export class AgeApprovalService { // Rule/behavior
 
     // Decision
     private decideStatus(age: number): AgeStatus{
-        if(age < 18){
-            return "BLOCKED";
-        }else{
-            return "ACCEPTED";
-        }
+        return age < 18 ? "BLOCKED" : "ACCEPTED";
     }
 }
