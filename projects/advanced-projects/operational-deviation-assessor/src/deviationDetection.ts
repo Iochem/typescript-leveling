@@ -1,26 +1,27 @@
 import {PerformanceChange, ProcessStatus, StateChange} from "./types";
+import {Snapshot} from "./Snapshot";
 
 
 // Functions domain
 
-export function StateDetection(beforeStatus: ProcessStatus, afterStatus: ProcessStatus ):StateChange{
-    if(beforeStatus === "RUNNING" && afterStatus === "STOPPED"){
+export function StateDetection(before: Snapshot, after: Snapshot):StateChange {
+    if (before.status === "RUNNING" && after.status === "STOPPED") {
         return "UNEXPECTED_STOP";
-
-    } else if(beforeStatus === "STOPPED" && afterStatus === "RUNNING"){
-        return "RECOVERY";
-    } else{
-        return "NO_CHANGE";
     }
 
+    if (before.status === "STOPPED" && after.status === "RUNNING") {
+        return "RECOVERY";
+    }
+    return "NO_CHANGE";
 }
 
-export function ConditionDetection(afterPerformance: number,beforePerformance: number):PerformanceChange{
-    if(afterPerformance >  beforePerformance){
+export function ConditionDetection(before: Snapshot, after: Snapshot): PerformanceChange {
+    if (after.performance > before.performance) {
         return "PERFORMANCE_IMPROVED";
-    } else if(afterPerformance ===  beforePerformance){
-        return "NO_CHANGE";
-    }  else if(afterPerformance <  beforePerformance){
+    }
+
+    if (after.performance < before.performance) {
         return "PERFORMANCE_DROP";
     }
+    return "NO_CHANGE";
 }
