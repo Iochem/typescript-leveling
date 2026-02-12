@@ -7,7 +7,7 @@ import {HealthStatus} from "./types";
  * The function is responsible only for identifying the transition.
  * It does NOT store or persist anything.
  */
-export function ActivityDetection( snapshot: Snapshot []): SystemEvent | null{
+export function activityDetection( snapshot: Snapshot []): SystemEvent | null{
     for (let i = 0; i < snapshot.length - 1; i++) {
         const current = snapshot[i];
         const next = snapshot[i + 1];
@@ -30,10 +30,16 @@ export function ActivityDetection( snapshot: Snapshot []): SystemEvent | null{
 }
 
 /**
- * Calculates the health status based on the downtime duration.
+ * Calculate absolute duration between snapshots.
+ */
+export function timeDetection(event: SystemEvent): number {
+    return Math.abs(event.finalActivity.timestamp - event.initialActivity.timestamp);
+}
+
+/**
  * This function assumes the event is already identified.
  */
-export function severityDetection(systemEvent: SystemEvent[]): HealthStatus {
+export function severityAnalyze(stopTime: number): HealthStatus {
     const MINUTE = 60_000;
     // Threshold definitions
     const HEALTHY_LIMIT = 5 * MINUTE;
@@ -41,20 +47,16 @@ export function severityDetection(systemEvent: SystemEvent[]): HealthStatus {
 
     let worstStatus: HealthStatus = "HEALTHY";
 
-    for (const event of systemEvent){
-        // Calculate absolute duration between snapshots
-        const time = Math.abs(event.finalActivity.timestamp - event.initialActivity.timestamp);
-
-        // Determine severity level based on duration thresholds
-        if (time < HEALTHY_LIMIT) {
-            worstStatus = "HEALTHY";
-        } else if (time < DEGRADED_LIMIT) {
-            worstStatus = "DEGRADED";
-        } else {
-            worstStatus = "CRITICAL";
-        }
+    // Determine severity level based on duration thresholds
+    if (stopTime < HEALTHY_LIMIT) {
+        worstStatus = "HEALTHY";
+    } else if (stopTime < DEGRADED_LIMIT) {
+        worstStatus = "DEGRADED";
+    } else {
+        worstStatus = "CRITICAL";
     }
-    return worstStatus;
 
+    return worstStatus;
 }
+
 
