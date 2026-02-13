@@ -13,7 +13,8 @@
 - *Domain validation and rules*
 - *Flow control* (`if`and `else`)
 - *Type* (`type alias`, `union type`, `composite types`)
-- *Object-Oriented Programming* (composition, practical abstraction, SRP)
+- *Object-Oriented Programming* (constructor, composition, practical abstraction, SRP)
+- *return with reason*
 
 ## 🛠️Technologies
 - TypeScript
