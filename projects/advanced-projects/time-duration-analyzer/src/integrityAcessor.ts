@@ -1,6 +1,8 @@
 import {Snapshot} from "./snapshot";
 import {SystemEvent} from "./systemEvent";
 import {HealthStatus} from "./types";
+import { intervalToDuration, formatDuration } from "date-fns";
+import { enUS } from "date-fns/locale";
 
 /**
  * Detects the first state transition inside a snapshot sequence.
@@ -37,6 +39,18 @@ export function timeDetection(event: SystemEvent): number {
 }
 
 /**
+ * Converts time in hours and minutes.
+ * But this transform in string
+ */
+export function formatStopTime(ms: number): string {
+    const duration = intervalToDuration({ start: 0, end: ms });
+    return formatDuration(duration, {
+        format: ["hours", "minutes"], // Ex:'40 minutes'
+        locale: enUS,
+    });
+}
+
+/**
  * This function assumes the event is already identified.
  */
 export function severityAnalyze(stopTime: number): HealthStatus {
@@ -58,5 +72,8 @@ export function severityAnalyze(stopTime: number): HealthStatus {
 
     return worstStatus;
 }
+
+
+
 
 

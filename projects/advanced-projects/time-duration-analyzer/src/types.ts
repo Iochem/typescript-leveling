@@ -7,4 +7,5 @@ export type IntegrityResult = {
     processId: string;
     severity: HealthStatus;
     stopTime: number;
+    formattedTime: string;
 }

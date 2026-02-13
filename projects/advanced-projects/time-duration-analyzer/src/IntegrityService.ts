@@ -1,7 +1,7 @@
 import {SystemEvent} from "./systemEvent";
 import {Snapshot} from "./snapshot";
 import {IntegrityResult} from "./types";
-import {activityDetection, severityAnalyze, timeDetection} from "./integrityAcessor";
+import {activityDetection, formatStopTime, severityAnalyze, timeDetection} from "./integrityAcessor";
 
 
 export class IntegrityService {
@@ -16,11 +16,13 @@ export class IntegrityService {
 
         const stopTime = timeDetection(activity);
         const severity = severityAnalyze(stopTime);
+        const formattedStopTime = formatStopTime(stopTime);
 
         this.integrityResult.push({
             processId:activity.initialActivity.processId,
             severity: severity,
             stopTime: stopTime,
+            formattedTime: formattedStopTime,
         });
 
         return  this.integrityResult;
