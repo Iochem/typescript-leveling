@@ -14,13 +14,7 @@ export function activityDetection( snapshot: Snapshot []): SystemEvent | null{
         const current = snapshot[i];
         const next = snapshot[i + 1];
 
-        if(current.status === "ON" && next.status === "OFF"){
-            return {
-                initialActivity: current,
-                finalActivity: next,
-            };
-        }
-
+        // Just consider as stop time: OFF --> ON
         if(current.status === "OFF" && next.status === "ON"){
             return {
                 initialActivity: current,
@@ -56,7 +50,7 @@ export function formatStopTime(ms: number): string {
 export function severityAnalyze(stopTime: number): HealthStatus {
     const MINUTE = 60_000;
     // Threshold definitions
-    const HEALTHY_LIMIT = 5 * MINUTE;
+    const HEALTHY_LIMIT = 15 * MINUTE;
     const DEGRADED_LIMIT = 30 * MINUTE;
 
     let worstStatus: HealthStatus = "HEALTHY";

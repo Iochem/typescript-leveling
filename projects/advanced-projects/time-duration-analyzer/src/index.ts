@@ -6,15 +6,15 @@ const service = new IntegrityService();
 
 // Testing
 const snapshotsShort: Snapshot[] = [
-    { status: "ON", processId: "proc-1", timestamp: Date.now() },
-    { status: "OFF", processId: "proc-1", timestamp: Date.now() + 2 * 60_000 }, // 2 min depois
-    { status: "ON", processId: "proc-1", timestamp: Date.now() + 10 * 60_000 }, // 10 min
+    { status: "ON", processId: "proc-3", timestamp: new Date(2026, 1, 13, 10, 0).getTime() },   // 10h00
+    { status: "OFF", processId: "proc-3", timestamp: new Date(2026, 1, 13, 10, 50).getTime() }, // 10h50
+    { status: "ON", processId: "proc-3", timestamp: new Date(2026, 1, 13, 11, 0).getTime() },   // 11h00
 ]; //HEALTHY
 
 const snapshotsLong: Snapshot[] = [
-    { status: "ON", processId: "proc-2", timestamp: Date.now() },
-    { status: "OFF", processId: "proc-2", timestamp: Date.now() + 40 * 60_000 }, // 40 min
-    { status: "ON", processId: "proc-2", timestamp: Date.now() + 50 * 60_000 }, // 50 min
+    { status: "ON", processId: "proc-3", timestamp: new Date(2026, 1, 13, 12, 0).getTime() },   // 12h00
+    { status: "OFF", processId: "proc-3", timestamp: new Date(2026, 1, 13, 13, 40).getTime() }, // 13h40
+    { status: "ON", processId: "proc-3", timestamp: new Date(2026, 1, 13, 15, 25).getTime() },   // 15h25
 ]; // CRITICAL
 
 service.analyserHealth(snapshotsShort);
