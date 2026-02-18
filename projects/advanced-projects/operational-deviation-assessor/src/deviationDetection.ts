@@ -4,7 +4,7 @@ import {Snapshot} from "./Snapshot";
 
 // Functions domain
 
-export function StateDetection(before: Snapshot, after: Snapshot):StateChange {
+export function stateDetection(before: Snapshot, after: Snapshot):StateChange {
     if (before.status === "RUNNING" && after.status === "STOPPED") {
         return "UNEXPECTED_STOP";
     }
@@ -15,7 +15,7 @@ export function StateDetection(before: Snapshot, after: Snapshot):StateChange {
     return "NO_CHANGE";
 }
 
-export function ConditionDetection(before: Snapshot, after: Snapshot): PerformanceChange {
+export function conditionDetection(before: Snapshot, after: Snapshot): PerformanceChange {
     if (after.performance > before.performance) {
         return "PERFORMANCE_IMPROVED";
     }
